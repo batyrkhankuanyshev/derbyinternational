@@ -1,301 +1,454 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<meta name="description" content="Derby International — Premium football jerseys. Worldwide shipping."/>
-<title>Derby International — Football Jersey Shop</title>
+<meta name="description" content="Derby International — Premium football jerseys. Authentic 25/26 replicas. Worldwide shipping."/>
+<title>Derby International — Football Jerseys</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231a1a1a'/><text x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='Inter,sans-serif' font-size='9' font-weight='700' fill='white'>DI</text></svg>"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
 <style>
-:root {
-  --black: #1a1a1a;
-  --gray1: #444;
-  --gray2: #777;
-  --gray3: #aaa;
-  --gray4: #ddd;
-  --gray5: #f5f5f5;
-  --white: #fff;
-  --green: #25D366;
-  --font: 'Inter', -apple-system, sans-serif;
+*{box-sizing:border-box;margin:0;padding:0}
+html{font-size:15px;scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,sans-serif;color:#111;background:#fff}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+
+/* ── PROMO BAR ── */
+.promo-bar{
+  background:#111;color:#fff;
+  text-align:center;padding:9px 1rem;
+  font-size:0.78rem;font-weight:500;letter-spacing:0.04em;
 }
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html { font-size: 15px; scroll-behavior: smooth; }
-body { font-family: var(--font); color: var(--black); background: var(--white); }
+.promo-bar strong{color:#f0c040}
 
 /* ── HEADER ── */
-header {
-  position: sticky; top: 0; z-index: 100;
-  background: var(--white);
-  border-bottom: 1px solid var(--gray4);
-  padding: 0 2rem;
-  display: flex; align-items: center; justify-content: space-between;
-  height: 56px;
+header{
+  position:sticky;top:0;z-index:200;
+  background:#fff;border-bottom:1px solid #e5e5e5;
 }
-.logo { font-size: 1.05rem; font-weight: 700; letter-spacing: 0.04em; text-decoration: none; color: var(--black); }
-.logo span { color: var(--gray2); font-weight: 400; }
-.header-actions { display: flex; align-items: center; gap: 1rem; }
-.btn-customize {
-  font-size: 0.8rem; font-weight: 500; color: var(--black);
-  border: 1px solid var(--gray4); border-radius: 4px;
-  padding: 6px 14px; text-decoration: none;
-  transition: border-color 0.15s, background 0.15s;
+.header-top{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 2rem;height:36px;
+  border-bottom:1px solid #f0f0f0;
+  font-size:0.72rem;color:#666;
 }
-.btn-customize:hover { border-color: var(--black); background: var(--gray5); }
-.btn-wa-header {
-  font-size: 0.8rem; font-weight: 500; color: var(--white);
-  background: var(--green); border: none; border-radius: 4px;
-  padding: 6px 14px; text-decoration: none; display: flex; align-items: center; gap: 6px;
-  transition: opacity 0.15s;
+.header-top-links{display:flex;gap:1.5rem;align-items:center}
+.header-top-links a:hover{color:#111}
+.header-main{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 2rem;height:64px;
 }
-.btn-wa-header:hover { opacity: 0.88; }
+.logo img{height:40px;width:auto}
+.logo-text{font-size:1.1rem;font-weight:800;letter-spacing:-0.02em;color:#111}
+nav.main-nav{display:flex;gap:0;align-items:center}
+.nav-link{
+  font-size:0.82rem;font-weight:600;letter-spacing:0.02em;
+  padding:0 1rem;height:64px;display:flex;align-items:center;
+  border-bottom:2px solid transparent;
+  transition:border-color 0.15s,color 0.15s;
+  white-space:nowrap;
+}
+.nav-link:hover{border-bottom-color:#111}
+.nav-link.sale{color:#c0392b}
+.header-actions{display:flex;align-items:center;gap:0.75rem}
+.search-bar{
+  display:flex;align-items:center;gap:8px;
+  border:1px solid #ddd;border-radius:4px;
+  padding:6px 12px;
+}
+.search-bar:focus-within{border-color:#111}
+.search-bar input{border:none;outline:none;font-family:inherit;font-size:0.8rem;width:160px}
+.btn-wa{
+  display:flex;align-items:center;gap:6px;
+  background:#25D366;color:#fff;
+  font-size:0.78rem;font-weight:700;
+  padding:8px 14px;border-radius:4px;
+  white-space:nowrap;transition:opacity 0.15s;
+}
+.btn-wa:hover{opacity:0.88}
 
 /* ── HERO ── */
-.hero {
-  position: relative;
-  overflow: hidden;
-  background: #0a0a0a;
-  border-bottom: 1px solid #222;
-  padding: 6rem 2rem 5rem;
+.hero{
+  position:relative;overflow:hidden;height:520px;
+  background:#0a0a0a;
 }
-.hero-bg {
-  position: absolute; inset: 0;
-  background: url('hero-stadium.jpg') center center / cover no-repeat;
-  opacity: 0.35;
-  pointer-events: none;
+.hero-bg{
+  position:absolute;inset:0;
+  background:url('hero-stadium.jpg') center 30% / cover no-repeat;
+  opacity:0.4;
 }
-.hero-overlay {
-  position: absolute; inset: 0;
-  background: linear-gradient(to right, rgba(0,0,0,0.75) 40%, rgba(0,0,0,0.2));
-  pointer-events: none;
+.hero-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to right,rgba(0,0,0,0.88) 38%,rgba(0,0,0,0.1));
 }
-.hero-inner { position: relative; z-index: 1; max-width: 860px; margin: 0 auto; width: 100%; }
-.hero-label { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 0.9rem; }
-.hero h1 {
-  font-size: 3.2rem; font-weight: 800; line-height: 1.05;
-  margin-bottom: 0.9rem; color: #fff;
-  letter-spacing: -0.01em;
-  font-stretch: expanded;
-  text-transform: uppercase;
+.hero-inner{
+  position:relative;z-index:1;
+  max-width:1100px;margin:0 auto;
+  padding:0 2rem;height:100%;
+  display:flex;flex-direction:column;justify-content:center;
 }
-.hero p { font-size: 0.95rem; color: rgba(255,255,255,0.6); max-width: 400px; line-height: 1.65; margin-bottom: 1.8rem; }
-.btn-hero-wa {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: var(--green); color: #fff;
-  font-size: 0.88rem; font-weight: 600;
-  padding: 12px 24px; border-radius: 6px; text-decoration: none;
-  transition: opacity 0.15s;
+.hero-tag{
+  font-size:0.68rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;
+  color:rgba(255,255,255,0.45);margin-bottom:0.85rem;
 }
-.btn-hero-wa:hover { opacity: 0.88; }
+.hero h1{
+  font-size:3.8rem;font-weight:800;line-height:1;
+  color:#fff;text-transform:uppercase;letter-spacing:-0.02em;
+  margin-bottom:1rem;max-width:560px;
+}
+.hero p{font-size:0.95rem;color:rgba(255,255,255,0.6);margin-bottom:2rem;max-width:400px;line-height:1.65}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn-primary{
+  background:#fff;color:#111;
+  font-size:0.82rem;font-weight:700;letter-spacing:0.03em;
+  padding:12px 28px;border-radius:4px;
+  transition:background 0.15s;
+}
+.btn-primary:hover{background:#eee}
+.btn-secondary{
+  background:transparent;color:#fff;
+  font-size:0.82rem;font-weight:600;
+  padding:12px 28px;border-radius:4px;
+  border:1px solid rgba(255,255,255,0.35);
+  transition:border-color 0.15s;
+}
+.btn-secondary:hover{border-color:#fff}
+
+/* ── FEATURES ── */
+.feature-strip{background:#f5f5f5;padding:2.5rem 2rem}
+.feature-strip-inner{
+  max-width:1100px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:2rem;text-align:center;
+}
+.fi-icon{font-size:1.5rem;margin-bottom:0.4rem}
+.fi-title{font-size:0.84rem;font-weight:700;margin-bottom:0.2rem}
+.fi-sub{font-size:0.76rem;color:#777;line-height:1.5}
+
+/* ── SECTION ── */
+.section{max-width:1100px;margin:0 auto;padding:3rem 2rem}
+.section-header{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:1.5rem}
+.section-title{font-size:1.25rem;font-weight:800;text-transform:uppercase;letter-spacing:-0.01em}
+.section-link{font-size:0.78rem;font-weight:600;color:#777;border-bottom:1px solid #ccc;padding-bottom:1px;transition:color 0.15s,border-color 0.15s}
+.section-link:hover{color:#111;border-color:#111}
+
+/* ── PROMO CARDS ── */
+.promo-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.promo-card{
+  border-radius:8px;overflow:hidden;position:relative;
+  min-height:260px;display:flex;align-items:flex-end;background:#111;
+}
+.promo-card-bg{
+  position:absolute;inset:0;object-fit:cover;width:100%;height:100%;opacity:0.48;
+}
+.promo-card-body{position:relative;z-index:1;padding:1.5rem;color:#fff}
+.promo-card-label{font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:0.35rem}
+.promo-card-title{font-size:1.25rem;font-weight:800;text-transform:uppercase;margin-bottom:0.75rem;line-height:1.1}
+.btn-promo{display:inline-block;background:#fff;color:#111;font-size:0.75rem;font-weight:700;padding:7px 16px;border-radius:4px;transition:background 0.15s}
+.btn-promo:hover{background:#eee}
+
+/* ── CLUB GRID ── */
+.club-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px}
+.club-tile{
+  border:1px solid #e5e5e5;border-radius:8px;
+  padding:1.1rem 0.5rem;
+  display:flex;flex-direction:column;align-items:center;gap:7px;
+  cursor:pointer;transition:border-color 0.15s,background 0.15s;text-align:center;
+}
+.club-tile:hover{border-color:#111;background:#fafafa}
+.club-tile-icon{font-size:1.5rem}
+.club-tile-name{font-size:0.72rem;font-weight:600;color:#333;line-height:1.25}
+
+/* ── PRODUCT GRID ── */
+.product-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:1.1rem}
+.product-card{
+  border:1px solid #e5e5e5;border-radius:8px;
+  overflow:hidden;cursor:pointer;
+  transition:border-color 0.2s,transform 0.2s;
+}
+.product-card:hover{border-color:#aaa;transform:translateY(-2px)}
+.product-card-img-wrap{overflow:hidden;aspect-ratio:3/4;background:#f5f5f5}
+.product-card-img{width:100%;height:100%;object-fit:cover;transition:transform 0.3s}
+.product-card:hover .product-card-img{transform:scale(1.04)}
+.product-card-body{padding:0.75rem 0.9rem 0.9rem}
+.product-card-cat{font-size:0.66rem;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;color:#aaa;margin-bottom:3px}
+.product-card-name{font-size:0.85rem;font-weight:600;color:#111;line-height:1.3;margin-bottom:0.55rem}
+.product-card-actions{display:flex;gap:7px}
+.btn-order-card{
+  flex:1;display:flex;align-items:center;justify-content:center;gap:5px;
+  background:#111;color:#fff;
+  font-size:0.72rem;font-weight:700;font-family:inherit;
+  padding:8px;border:none;border-radius:4px;cursor:pointer;
+  text-decoration:none;transition:background 0.15s;
+}
+.btn-order-card:hover{background:#333}
+.btn-customize-card{
+  padding:8px 10px;font-size:0.72rem;font-family:inherit;
+  border:1px solid #ddd;border-radius:4px;
+  background:none;cursor:pointer;color:#111;
+  text-decoration:none;transition:border-color 0.15s;
+  display:flex;align-items:center;
+}
+.btn-customize-card:hover{border-color:#111}
+
+/* ── SEARCH BAND ── */
+.search-band{background:#111;padding:2.5rem 2rem}
+.search-band-inner{max-width:560px;margin:0 auto;text-align:center}
+.search-band h2{color:#fff;font-size:1.1rem;font-weight:700;margin-bottom:1rem;text-transform:uppercase;letter-spacing:0.03em}
+.search-big{display:flex;border:2px solid #fff;border-radius:4px;overflow:hidden}
+.search-big input{
+  flex:1;padding:11px 15px;
+  background:transparent;border:none;outline:none;
+  color:#fff;font-family:inherit;font-size:0.88rem;
+}
+.search-big input::placeholder{color:rgba(255,255,255,0.35)}
+.search-big button{
+  background:#fff;color:#111;border:none;
+  padding:11px 18px;font-weight:700;font-size:0.82rem;
+  cursor:pointer;font-family:inherit;
+}
+.search-big button:hover{background:#eee}
 
 /* ── FILTERS ── */
-.filters {
-  position: sticky; top: 56px; z-index: 90;
-  background: var(--white); border-bottom: 1px solid var(--gray4);
-  padding: 0 2rem;
-  display: flex; gap: 0; overflow-x: auto;
+.filters-wrap{border-bottom:1px solid #e5e5e5;background:#fff;position:sticky;top:100px;z-index:100}
+.filters-inner{
+  max-width:1100px;margin:0 auto;padding:0 2rem;
+  display:flex;align-items:center;overflow-x:auto;
 }
-.filter-btn {
-  font-size: 0.8rem; font-weight: 500; color: var(--gray2);
-  background: none; border: none; border-bottom: 2px solid transparent;
-  padding: 0.85rem 1rem; cursor: pointer; white-space: nowrap;
-  transition: color 0.15s, border-color 0.15s;
-  font-family: var(--font);
+.filter-btn{
+  font-size:0.78rem;font-weight:600;color:#999;
+  background:none;border:none;border-bottom:2px solid transparent;
+  padding:0.85rem 0.9rem;cursor:pointer;white-space:nowrap;
+  transition:color 0.15s,border-color 0.15s;font-family:inherit;
 }
-.filter-btn:hover { color: var(--black); }
-.filter-btn.active { color: var(--black); border-bottom-color: var(--black); }
+.filter-btn:hover{color:#111}
+.filter-btn.active{color:#111;border-bottom-color:#111}
 
-/* ── GRID ── */
-.catalogue {
-  max-width: 860px; margin: 0 auto;
-  padding: 2rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1.5rem;
-}
-
-/* ── JERSEY CARD ── */
-.jersey-card {
-  border: 1px solid var(--gray4);
-  border-radius: 8px;
-  overflow: hidden;
-  transition: border-color 0.2s;
-  display: flex; flex-direction: column;
-}
-.jersey-card:hover { border-color: var(--gray1); }
-.jersey-card img {
-  width: 100%; aspect-ratio: 3/4; object-fit: cover;
-  background: var(--gray5); display: block;
-}
-.card-body { padding: 0.85rem 1rem 1rem; flex: 1; display: flex; flex-direction: column; gap: 0.5rem; }
-.card-category { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; color: var(--gray2); }
-.card-name { font-size: 0.88rem; font-weight: 500; color: var(--black); line-height: 1.35; flex: 1; }
-.card-actions { display: flex; gap: 8px; margin-top: 0.4rem; }
-.btn-order {
-  flex: 1; font-size: 0.78rem; font-weight: 500; color: var(--white);
-  background: var(--green); border: none; border-radius: 4px;
-  padding: 7px 10px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 5px;
-  transition: opacity 0.15s; text-decoration: none; font-family: var(--font);
-}
-.btn-order:hover { opacity: 0.88; }
-.btn-edit {
-  font-size: 0.78rem; font-weight: 500; color: var(--black);
-  background: none; border: 1px solid var(--gray4); border-radius: 4px;
-  padding: 7px 10px; cursor: pointer; white-space: nowrap;
-  transition: border-color 0.15s; text-decoration: none; font-family: var(--font);
-}
-.btn-edit:hover { border-color: var(--black); }
-
-/* ── SEARCH ── */
-.search-wrap {
-  max-width: 860px; margin: 0 auto;
-  padding: 1rem 2rem 0;
-}
-.search-input {
-  width: 100%; padding: 9px 14px;
-  font-size: 0.88rem; font-family: var(--font);
-  border: 1px solid var(--gray4); border-radius: 6px;
-  outline: none; color: var(--black); background: var(--white);
-  transition: border-color 0.15s;
-}
-.search-input:focus { border-color: var(--black); }
-.search-input::placeholder { color: var(--gray3); }
+/* ── CATALOGUE ── */
+.catalogue-section{max-width:1100px;margin:0 auto;padding:1.5rem 2rem 3rem}
 
 /* ── PREVIEW MODAL ── */
-.preview-overlay {
-  display: none; position: fixed; inset: 0; z-index: 200;
-  background: rgba(0,0,0,0.75);
-  align-items: center; justify-content: center;
-  padding: 1rem;
+.preview-overlay{
+  display:none;position:fixed;inset:0;z-index:300;
+  background:rgba(0,0,0,0.75);
+  align-items:center;justify-content:center;padding:1rem;
 }
-.preview-overlay.open { display: flex; }
-.preview-modal {
-  background: var(--white); border-radius: 12px;
-  overflow: hidden; max-width: 420px; width: 100%;
-  display: flex; flex-direction: column;
+.preview-overlay.open{display:flex}
+.preview-wrap{position:relative;max-width:400px;width:100%}
+.preview-close{
+  position:absolute;top:-14px;right:-14px;
+  width:34px;height:34px;border-radius:50%;
+  background:#fff;color:#111;border:none;
+  font-size:0.95rem;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;font-weight:700;z-index:1;
 }
-.preview-modal img {
-  width: 100%; aspect-ratio: 3/4; object-fit: cover; display: block;
+.preview-modal{background:#fff;border-radius:10px;overflow:hidden}
+.preview-modal img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.preview-info{padding:1rem 1.2rem 1.2rem}
+.preview-cat{font-size:0.67rem;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;color:#aaa;margin-bottom:3px}
+.preview-name{font-size:1rem;font-weight:700;margin-bottom:0.9rem}
+.preview-actions{display:flex;gap:8px}
+.btn-preview-wa{
+  flex:1;display:flex;align-items:center;justify-content:center;gap:6px;
+  background:#25D366;color:#fff;
+  font-size:0.82rem;font-weight:700;font-family:inherit;
+  padding:11px;border:none;border-radius:4px;cursor:pointer;
+  text-decoration:none;transition:opacity 0.15s;
 }
-.preview-info {
-  padding: 1rem 1.25rem 1.25rem;
-  display: flex; flex-direction: column; gap: 0.75rem;
+.btn-preview-wa:hover{opacity:0.88}
+.btn-preview-edit{
+  padding:11px 13px;font-size:0.82rem;font-family:inherit;
+  border:1px solid #ddd;border-radius:4px;
+  background:none;cursor:pointer;color:#111;
+  text-decoration:none;transition:border-color 0.15s;
 }
-.preview-meta { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; color: var(--gray2); }
-.preview-name { font-size: 1rem; font-weight: 600; color: var(--black); }
-.preview-actions { display: flex; gap: 8px; }
-.btn-preview-wa {
-  flex: 1; display: flex; align-items: center; justify-content: center; gap: 6px;
-  background: var(--green); color: var(--white);
-  font-size: 0.85rem; font-weight: 600; font-family: var(--font);
-  padding: 10px; border: none; border-radius: 6px; cursor: pointer;
-  text-decoration: none; transition: opacity 0.15s;
-}
-.btn-preview-wa:hover { opacity: 0.88; }
-.btn-preview-edit {
-  padding: 10px 14px; font-size: 0.85rem; font-family: var(--font);
-  border: 1px solid var(--gray4); border-radius: 6px;
-  background: none; cursor: pointer; text-decoration: none; color: var(--black);
-  transition: border-color 0.15s;
-}
-.btn-preview-edit:hover { border-color: var(--black); }
-.btn-preview-close {
-  position: absolute; top: 1rem; right: 1rem;
-  width: 32px; height: 32px; border-radius: 50%;
-  background: rgba(0,0,0,0.5); color: #fff; border: none;
-  font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center;
-}
-.preview-overlay { position: fixed; }
-.preview-wrap { position: relative; max-width: 420px; width: 100%; }
+.btn-preview-edit:hover{border-color:#111}
 
-/* ── EMPTY STATE ── */
-.empty { text-align: center; padding: 4rem 2rem; color: var(--gray2); font-size: 0.9rem; grid-column: 1/-1; }
-
-/* ── BACK TO TOP ── */
-.back-top {
-  position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 150;
-  width: 40px; height: 40px; border-radius: 50%;
-  background: var(--black); color: var(--white);
-  border: none; cursor: pointer; font-size: 1rem;
-  display: flex; align-items: center; justify-content: center;
-  opacity: 0; pointer-events: none;
-  transition: opacity 0.2s;
+/* ── BACK TOP ── */
+.back-top{
+  position:fixed;bottom:1.5rem;right:1.5rem;z-index:150;
+  width:40px;height:40px;border-radius:50%;
+  background:#111;color:#fff;border:none;cursor:pointer;font-size:1rem;
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;pointer-events:none;transition:opacity 0.2s;
 }
-.back-top.visible { opacity: 1; pointer-events: auto; }
+.back-top.visible{opacity:1;pointer-events:auto}
 
 /* ── FOOTER ── */
-footer {
-  border-top: 1px solid var(--gray4);
-  padding: 1.5rem 2rem;
-  text-align: center;
-  font-size: 0.78rem; color: var(--gray3);
+footer{background:#111;color:#fff;padding:3rem 2rem 1.5rem}
+.footer-grid{
+  max-width:1100px;margin:0 auto;
+  display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;
+  margin-bottom:2.5rem;
 }
-.footer-links { display: flex; align-items: center; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
+.footer-brand p{font-size:0.8rem;color:#777;line-height:1.65;max-width:240px;margin-top:0.75rem}
+.footer-logo-text{font-size:1rem;font-weight:800;letter-spacing:-0.01em;color:#fff}
+.footer-col h4{font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#fff;margin-bottom:0.9rem}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:0.45rem}
+.footer-col ul li a{font-size:0.8rem;color:#777;transition:color 0.15s}
+.footer-col ul li a:hover{color:#fff}
+.footer-bottom{
+  max-width:1100px;margin:0 auto;
+  border-top:1px solid #222;padding-top:1.4rem;
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;
+  font-size:0.73rem;color:#555;
+}
+.footer-social{display:flex;gap:1.25rem}
+.footer-social a{color:#555;transition:color 0.15s}
+.footer-social a:hover{color:#fff}
 
 /* ── RESPONSIVE ── */
-@media (max-width: 600px) {
-  header { padding: 0 1rem; }
-  .hero { padding: 2rem 1rem 1.5rem; }
-  .hero h1 { font-size: 1.5rem; }
-  .filters { padding: 0 1rem; }
-  .catalogue { padding: 1rem; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 1rem; }
+@media(max-width:768px){
+  .header-top{display:none}
+  .header-main{padding:0 1rem}
+  .search-bar{display:none}
+  nav.main-nav .nav-link{padding:0 0.55rem;font-size:0.75rem}
+  .hero{height:400px}
+  .hero h1{font-size:2.4rem}
+  .promo-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .section{padding:2rem 1rem}
+  .catalogue-section{padding:1rem 1rem 2rem}
+}
+@media(max-width:480px){
+  .hero h1{font-size:1.9rem}
+  .product-grid{grid-template-columns:repeat(2,1fr);gap:0.65rem}
+  .club-grid{grid-template-columns:repeat(3,1fr)}
+  nav.main-nav{display:none}
+  .footer-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
 <body>
 
+<!-- PROMO BAR -->
+<div class="promo-bar">
+  🌍 FREE WORLDWIDE SHIPPING ON ORDERS OVER $100 &nbsp;·&nbsp; <strong>USE CODE DI10 FOR 10% OFF</strong>
+</div>
+
+<!-- HEADER -->
 <header>
-  <a class="logo" href="index.html"><img src="logos/derby-ftbl.png" alt="DerbyDI" style="height:36px; width:auto; display:block;"/></a>
-  <div class="header-actions">
-    <a class="btn-customize" href="https://instagram.com/derbyinternational" target="_blank" style="display:flex;align-items:center;gap:5px;">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-      @derbyinternational
+  <div class="header-top">
+    <div class="header-top-links">
+      <a href="https://wa.me/77026526400" target="_blank">Contact Us</a>
+      <a href="https://instagram.com/derbyinternational" target="_blank">@derbyinternational</a>
+    </div>
+    <div class="header-top-links">
+      <span>🌐 Worldwide Shipping</span>
+      <span>💳 Secure Payment via WhatsApp</span>
+    </div>
+  </div>
+  <div class="header-main">
+    <a href="index.html" class="logo">
+      <img src="logos/derby-ftbl.png" alt="Derby International" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
+      <span class="logo-text" style="display:none">DERBY INTERNATIONAL</span>
     </a>
-    <a class="btn-customize" href="customizer.html">Jersey Customizer</a>
-    <a class="btn-wa-header" href="https://wa.me/77026526400" target="_blank">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.143.564 4.153 1.55 5.888L.058 23.625a.75.75 0 0 0 .906.919l5.9-1.548A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.7-.504-5.25-1.385l-.375-.217-3.875 1.016 1.032-3.767-.23-.386A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-      WhatsApp
-    </a>
+    <nav class="main-nav">
+      <a class="nav-link" href="#new">New In</a>
+      <a class="nav-link" href="#catalogue">All Jerseys</a>
+      <a class="nav-link" href="#clubs">By Club</a>
+      <a class="nav-link" href="customizer.html">Customizer</a>
+      <a class="nav-link sale" href="#catalogue">Deals</a>
+    </nav>
+    <div class="header-actions">
+      <div class="search-bar">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="text" placeholder="Search jerseys..." id="header-search"/>
+      </div>
+      <a class="btn-wa" href="https://wa.me/77026526400" target="_blank">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.143.564 4.153 1.55 5.888L.058 23.625a.75.75 0 0 0 .906.919l5.9-1.548A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.7-.504-5.25-1.385l-.375-.217-3.875 1.016 1.032-3.767-.23-.386A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        Order via WhatsApp
+      </a>
+    </div>
   </div>
 </header>
 
+<!-- HERO -->
 <div class="hero">
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
   <div class="hero-inner">
-    <p class="hero-label">Worldwide Shipping</p>
-    <h1>Футбольная форма<br>лучших клубов мира</h1>
-    <p>Authentic 25/26 season replicas. Order worldwide via WhatsApp.</p>
-    <a class="btn-hero-wa" href="https://wa.me/77026526400" target="_blank">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.143.564 4.153 1.55 5.888L.058 23.625a.75.75 0 0 0 .906.919l5.9-1.548A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.7-.504-5.25-1.385l-.375-.217-3.875 1.016 1.032-3.767-.23-.386A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-      Order via WhatsApp
-    </a>
+    <p class="hero-tag">Season 25/26 Collection</p>
+    <h1>World's Best<br>Football<br>Jerseys</h1>
+    <p>Authentic replicas from the world's top clubs. Worldwide shipping. Order via WhatsApp in minutes.</p>
+    <div class="hero-btns">
+      <a class="btn-primary" href="#catalogue">Shop All Jerseys</a>
+      <a class="btn-secondary" href="customizer.html">Customize Yours</a>
+    </div>
   </div>
 </div>
 
-<nav class="filters" id="filters"></nav>
-
-<div class="search-wrap">
-  <input class="search-input" id="search" type="text" placeholder="Search — Barcelona, Real Madrid..."/>
+<!-- FEATURES -->
+<div class="feature-strip">
+  <div class="feature-strip-inner">
+    <div><div class="fi-icon">🌍</div><div class="fi-title">Worldwide Shipping</div><div class="fi-sub">We ship to 50+ countries with tracked delivery.</div></div>
+    <div><div class="fi-icon">✅</div><div class="fi-title">Authentic Quality</div><div class="fi-sub">Premium replicas — same look, same feel.</div></div>
+    <div><div class="fi-icon">💬</div><div class="fi-title">WhatsApp Orders</div><div class="fi-sub">Order instantly. We reply within the hour.</div></div>
+    <div><div class="fi-icon">✂️</div><div class="fi-title">Custom Printing</div><div class="fi-sub">Add your name & number to any jersey.</div></div>
+  </div>
 </div>
 
-<div class="catalogue" id="catalogue"></div>
+<!-- PROMO CARDS -->
+<div class="section" id="new">
+  <div class="section-header">
+    <h2 class="section-title">New Arrivals</h2>
+    <a class="section-link" href="#catalogue">View all →</a>
+  </div>
+  <div class="promo-grid" id="promo-cards">
+    <!-- filled by JS -->
+  </div>
+</div>
+
+<!-- SHOP BY CLUB -->
+<div class="section" id="clubs">
+  <div class="section-header">
+    <h2 class="section-title">Shop by Club</h2>
+    <a class="section-link" href="#catalogue">View all →</a>
+  </div>
+  <div class="club-grid" id="club-grid"></div>
+</div>
+
+<!-- SEARCH BAND -->
+<div class="search-band">
+  <div class="search-band-inner">
+    <h2>Find Your Jersey</h2>
+    <div class="search-big">
+      <input type="text" placeholder="Search by club, league or country..." id="main-search"/>
+      <button onclick="doSearch()">Search</button>
+    </div>
+  </div>
+</div>
+
+<!-- FILTERS -->
+<div class="filters-wrap">
+  <div class="filters-inner" id="filters"></div>
+</div>
+
+<!-- CATALOGUE -->
+<div class="catalogue-section" id="catalogue">
+  <div class="section-header" style="margin-bottom:1.25rem">
+    <h2 class="section-title">All Jerseys</h2>
+    <span id="result-count" style="font-size:0.8rem;color:#999"></span>
+  </div>
+  <div class="product-grid" id="product-grid"></div>
+</div>
 
 <!-- PREVIEW MODAL -->
 <div class="preview-overlay" id="preview-overlay" onclick="if(event.target===this)closePreview()">
   <div class="preview-wrap">
-    <button class="btn-preview-close" onclick="closePreview()">✕</button>
+    <button class="preview-close" onclick="closePreview()">✕</button>
     <div class="preview-modal">
       <img id="preview-img" src="" alt=""/>
       <div class="preview-info">
-        <span class="preview-meta" id="preview-cat"></span>
-        <span class="preview-name" id="preview-name"></span>
+        <div class="preview-cat" id="preview-cat"></div>
+        <div class="preview-name" id="preview-name"></div>
         <div class="preview-actions">
           <a class="btn-preview-wa" id="preview-wa" href="#" target="_blank">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.143.564 4.153 1.55 5.888L.058 23.625a.75.75 0 0 0 .906.919l5.9-1.548A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.7-.504-5.25-1.385l-.375-.217-3.875 1.016 1.032-3.767-.23-.386A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-            Order
+            Order via WhatsApp
           </a>
           <a class="btn-preview-edit" id="preview-edit" href="#">✏︎ Customize</a>
         </div>
@@ -304,28 +457,68 @@ footer {
   </div>
 </div>
 
+<button class="back-top" id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<!-- FOOTER -->
 <footer>
-  <div class="footer-links">
-    <span>© 2025 Derby International</span>
-    <a href="https://wa.me/77026526400" style="color:inherit">+7 702 652 6400</a>
-    <a href="https://instagram.com/derbyinternational" target="_blank" style="color:inherit;display:flex;align-items:center;gap:4px;">
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-      @derbyinternational
-    </a>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo-text">DERBY INTERNATIONAL</div>
+      <p>Premium football jerseys shipped worldwide. Authentic 25/26 season replicas from the world's top clubs. Order fast via WhatsApp.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="#catalogue">All Jerseys</a></li>
+        <li><a href="#new">New Arrivals</a></li>
+        <li><a href="#clubs">By Club</a></li>
+        <li><a href="customizer.html">Customizer</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="https://wa.me/77026526400" target="_blank">Contact Us</a></li>
+        <li><a href="https://wa.me/77026526400" target="_blank">Shipping Info</a></li>
+        <li><a href="https://wa.me/77026526400" target="_blank">Returns</a></li>
+        <li><a href="https://wa.me/77026526400" target="_blank">Size Guide</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Follow</h4>
+      <ul>
+        <li><a href="https://instagram.com/derbyinternational" target="_blank">Instagram</a></li>
+        <li><a href="https://wa.me/77026526400" target="_blank">WhatsApp</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Derby International. All rights reserved.</span>
+    <div class="footer-social">
+      <a href="https://instagram.com/derbyinternational" target="_blank">Instagram</a>
+      <a href="https://wa.me/77026526400" target="_blank">WhatsApp</a>
+    </div>
   </div>
 </footer>
 
-<button class="back-top" id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
-
 <script>
 const WA = '77026526400';
-const WA_SVG = `<svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.143.564 4.153 1.55 5.888L.058 23.625a.75.75 0 0 0 .906.919l5.9-1.548A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.7-.504-5.25-1.385l-.375-.217-3.875 1.016 1.032-3.767-.23-.386A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>`;
+const WA_SVG = `<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.143.564 4.153 1.55 5.888L.058 23.625a.75.75 0 0 0 .906.919l5.9-1.548A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.7-.504-5.25-1.385l-.375-.217-3.875 1.016 1.032-3.767-.23-.386A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>`;
+
+const clubEmojis = {
+  'Barcelona':'🔵🔴','Real Madrid':'⚪⬜','Manchester United':'🔴',
+  'Liverpool':'🔴','Arsenal':'🔴⚪','Manchester City':'🩵',
+  'Chelsea':'🔵','Tottenham':'⚪','AC Milan':'🔴⚫',
+  'Inter Milan':'🔵⚫','Juventus':'⚫⚪','Borussia Dortmund':'🟡⚫',
+  'Bayern Munich':'🔴','PSG':'🔵🔴','Ajax':'🔴⚪',
+  'Inter Miami':'🌸','Atletico Madrid':'🔴⚪',
+};
 
 function openPreview(file, name, category) {
   document.getElementById('preview-img').src = 'jerseys/' + file;
   document.getElementById('preview-name').textContent = name;
   document.getElementById('preview-cat').textContent = category;
-  const msg = encodeURIComponent('Hello! I'd like to order: ' + name);
+  const msg = encodeURIComponent("Hello! I'd like to order: " + name);
   document.getElementById('preview-wa').href = 'https://wa.me/' + WA + '?text=' + msg;
   document.getElementById('preview-edit').href = 'customizer.html?jersey=' + encodeURIComponent(file);
   document.getElementById('preview-overlay').classList.add('open');
@@ -333,68 +526,111 @@ function openPreview(file, name, category) {
 function closePreview() {
   document.getElementById('preview-overlay').classList.remove('open');
 }
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closePreview(); });
+document.addEventListener('keydown', e => { if(e.key==='Escape') closePreview(); });
 
-const backTop = document.getElementById('back-top');
 window.addEventListener('scroll', () => {
-  backTop.classList.toggle('visible', window.scrollY > 400);
+  document.getElementById('back-top').classList.toggle('visible', window.scrollY > 500);
 });
+
+function doSearch() {
+  const q = document.getElementById('main-search').value;
+  document.getElementById('header-search').value = q;
+  document.querySelector('#catalogue').scrollIntoView({behavior:'smooth'});
+  renderGrid(q);
+}
+document.getElementById('main-search').addEventListener('keydown', e => { if(e.key==='Enter') doSearch(); });
+document.getElementById('header-search').addEventListener('input', e => renderGrid(e.target.value));
+
+let allJerseys = [], activeCategory = 'все';
 
 fetch('jerseys/manifest.json')
   .then(r => r.json())
   .then(data => {
-    const categories = data.categories;
-    const jerseys = data.jerseys;
-    let active = 'все';
-    let query = '';
+    allJerseys = data.jerseys;
 
+    // promo cards — pick first 2 jerseys
+    const promoEl = document.getElementById('promo-cards');
+    const featured = allJerseys.slice(0, 2);
+    promoEl.innerHTML = featured.map(j => `
+      <div class="promo-card" onclick="openPreview('${j.file.replace(/'/g,"\\'")}','${j.name.replace(/'/g,"\\'")}','${j.category.replace(/'/g,"\\'")}')">
+        <img class="promo-card-bg" src="jerseys/${j.file}" alt="${j.name}"/>
+        <div class="promo-card-body">
+          <p class="promo-card-label">New Arrival</p>
+          <h3 class="promo-card-title">${j.name}</h3>
+          <span class="btn-promo">Shop Now</span>
+        </div>
+      </div>`).join('');
+
+    // club tiles
+    const clubs = [...new Set(allJerseys.map(j => j.name.split(' ')[0] + ' ' + (j.name.split(' ')[1] || '')).slice(0,20))];
+    const uniqueClubs = [...new Set(allJerseys.map(j => {
+      const parts = j.name.split(' — ');
+      return parts[0];
+    }))].slice(0,12);
+    const clubGrid = document.getElementById('club-grid');
+    uniqueClubs.forEach(club => {
+      const tile = document.createElement('div');
+      tile.className = 'club-tile';
+      tile.innerHTML = `<div class="club-tile-icon">${clubEmojis[club] || '⚽'}</div><div class="club-tile-name">${club}</div>`;
+      tile.onclick = () => {
+        document.getElementById('header-search').value = club;
+        document.querySelector('#catalogue').scrollIntoView({behavior:'smooth'});
+        renderGrid(club);
+      };
+      clubGrid.appendChild(tile);
+    });
+
+    // filters
     const filtersEl = document.getElementById('filters');
-    categories.forEach(cat => {
-      const count = cat === 'все' ? jerseys.length : jerseys.filter(j => j.category === cat).length;
+    data.categories.forEach(cat => {
+      const count = cat === 'все' ? allJerseys.length : allJerseys.filter(j => j.category === cat).length;
+      const label = cat === 'все' ? 'All' : cat;
       const btn = document.createElement('button');
       btn.className = 'filter-btn' + (cat === 'все' ? ' active' : '');
-      btn.textContent = (cat === 'все' ? 'Все' : cat) + ` (${count})`;
+      btn.textContent = `${label} (${count})`;
       btn.onclick = () => {
-        active = cat;
+        activeCategory = cat;
         document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-        render();
+        renderGrid(document.getElementById('header-search').value);
       };
       filtersEl.appendChild(btn);
     });
 
-    document.getElementById('search').addEventListener('input', e => {
-      query = e.target.value.toLowerCase().trim();
-      render();
-    });
-
-    function render() {
-      const el = document.getElementById('catalogue');
-      let list = active === 'все' ? jerseys : jerseys.filter(j => j.category === active);
-      if (query) list = list.filter(j => j.name.toLowerCase().includes(query) || j.category.toLowerCase().includes(query));
-      if (!list.length) { el.innerHTML = '<p class="empty">Nothing found</p>'; return; }
-      el.innerHTML = list.map(j => {
-        const n = j.name.replace(/'/g,"\\'"), f = j.file.replace(/'/g,"\\'"), c = j.category.replace(/'/g,"\\'");
-        const msg = encodeURIComponent(`Hello! I'd like to order: ${j.name}`);
-        const waUrl = `https://wa.me/${WA}?text=${msg}`;
-        const custUrl = `customizer.html?jersey=${encodeURIComponent(j.file)}`;
-        return `
-          <div class="jersey-card">
-            <img src="jerseys/${j.file}" alt="${j.name}" loading="lazy" style="cursor:zoom-in" onclick="openPreview('${f}','${n}','${c}')"/>
-            <div class="card-body">
-              <span class="card-category">${j.category}</span>
-              <span class="card-name">${j.name}</span>
-              <div class="card-actions">
-                <a class="btn-order" href="${waUrl}" target="_blank">${WA_SVG} Order</a>
-                <a class="btn-edit" href="${custUrl}">✏︎</a>
-              </div>
-            </div>
-          </div>`;
-      }).join('');
-    }
-
-    render();
+    renderGrid('');
   });
+
+function renderGrid(query = '') {
+  let list = activeCategory === 'все' ? allJerseys : allJerseys.filter(j => j.category === activeCategory);
+  if (query) list = list.filter(j =>
+    j.name.toLowerCase().includes(query.toLowerCase()) ||
+    j.category.toLowerCase().includes(query.toLowerCase())
+  );
+  const grid = document.getElementById('product-grid');
+  document.getElementById('result-count').textContent = list.length + ' items';
+  if (!list.length) {
+    grid.innerHTML = '<p style="grid-column:1/-1;padding:3rem;text-align:center;color:#aaa">No jerseys found</p>';
+    return;
+  }
+  grid.innerHTML = list.map(j => {
+    const n = j.name.replace(/'/g,"\\'"), f = j.file.replace(/'/g,"\\'"), c = j.category.replace(/'/g,"\\'");
+    const msg = encodeURIComponent("Hello! I'd like to order: " + j.name);
+    return `
+      <div class="product-card">
+        <div class="product-card-img-wrap" onclick="openPreview('${f}','${n}','${c}')">
+          <img class="product-card-img" src="jerseys/${j.file}" alt="${j.name}" loading="lazy"/>
+        </div>
+        <div class="product-card-body">
+          <div class="product-card-cat">${j.category}</div>
+          <div class="product-card-name">${j.name}</div>
+          <div class="product-card-actions">
+            <a class="btn-order-card" href="https://wa.me/${WA}?text=${msg}" target="_blank">${WA_SVG} Order</a>
+            <a class="btn-customize-card" href="customizer.html?jersey=${encodeURIComponent(j.file)}" title="Customize">✏︎</a>
+          </div>
+        </div>
+      </div>`;
+  }).join('');
+}
 </script>
 </body>
 </html>
